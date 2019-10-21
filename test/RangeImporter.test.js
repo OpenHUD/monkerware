@@ -5,7 +5,7 @@ describe('RangeImporter', () => {
     describe('importFile', () => {
         it ('imports .rng files', () => {
             const range = importFile({
-                file: './test/ranges/4-way/10bb/0.rng'
+                path: './test/ranges/4-way/10bb/0.rng'
             });
 
             expect(range.get('72o')).to.deep.equal({
@@ -18,7 +18,7 @@ describe('RangeImporter', () => {
     describe('importDirectory', () => {
         it ('imports all .rng files', () => {
             const ranges = importDirectory({
-                directory: './test/ranges/4-way/10bb/'
+                path: './test/ranges/4-way/10bb/'
             });
 
             expect(ranges.get('0')).to.not.be.undefined;

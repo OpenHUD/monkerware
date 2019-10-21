@@ -1,5 +1,5 @@
 import fs from 'fs';
-import path from 'path';
+import Path from 'path';
 
 
 const importRng = rng => {
@@ -26,18 +26,18 @@ const importRng = rng => {
   return map;
 };
 
-const importFile = ({ file }) => {
-  const rng = fs.readFileSync(file, 'utf8');
+const importFile = ({ path }) => {
+  const rng = fs.readFileSync(path, 'utf8');
   return importRng(rng);
 };
 
-const importDirectory = ({ directory }) => {
-  const files = fs.readdirSync(directory, 'utf8');
+const importDirectory = ({ path }) => {
+  const files = fs.readdirSync(path, 'utf8');
 
   const map = new Map();
   files.forEach(file => {
-    const branchName = path.parse(file).name;
-    const range = importFile({ file: path.resolve(directory, file) });
+    const branchName = Path.parse(file).name;
+    const range = importFile({ path: Path.resolve(path, file) });
     map.set(branchName, range);
   })
 
