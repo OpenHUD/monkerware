@@ -17,8 +17,8 @@ const importRng = rng => {
 
   const map = new Map();
   for (let i = 0; i < numHands; ++i) {
-    const hand = lines[2*i];
-    const data = lines[2*i + 1];
+    const hand = lines[2*i].replace(/\r/g, '');
+    const data = lines[2*i + 1].replace(/\r/g, '');
     const [p, ev1000] = data.split(';');
 
     map.set(hand, { p: parseFloat(p), ev: ev1000/1000 });
