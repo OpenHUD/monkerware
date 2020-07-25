@@ -1,6 +1,6 @@
 {
   "name": "monkerware",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "MonkerWare helpers",
   "main": "src/index.js",
   "scripts": {
