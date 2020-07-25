@@ -1,9 +1,0 @@
-{
-    "presets": [
-        "es2015"
-    ],
-    "comments": false,
-    "plugins": [
-        "transform-strict-mode"
-    ]
-}
