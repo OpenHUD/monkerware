@@ -1,3 +1,3 @@
-import RangeImporter from './RangeImporter.js';
+import { importFile, importDirectory } from './RangeImporter.js';
 
-export { RangeImporter };
+export { importFile, importDirectory };
